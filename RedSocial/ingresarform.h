@@ -2,6 +2,8 @@
 #define INGRESARFORM_H
 
 #include <QDialog>
+#include "menuprincipal.h"
+#include "redsocial.h"
 
 namespace Ui {
 class IngresarForm;
@@ -14,6 +16,11 @@ class IngresarForm : public QDialog
 public:
     explicit IngresarForm(QWidget *parent = nullptr);
     ~IngresarForm();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::IngresarForm *ui;

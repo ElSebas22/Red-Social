@@ -17,11 +17,13 @@ RedSocial::~RedSocial()
 void RedSocial::on_Registrarse_clicked()
 {
     RegistrarseForm *reg = new RegistrarseForm(0);
+    this->close();
     reg->show();
 }
 
 void RedSocial::on_Ingresar_clicked()
 {
     IngresarForm *ing = new IngresarForm(0);
+    this->close();
     ing->show();
 }

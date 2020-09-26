@@ -12,3 +12,17 @@ RegistrarseForm::~RegistrarseForm()
 {
     delete ui;
 }
+
+void RegistrarseForm::on_pushButton_clicked()
+{
+    MenuPrincipal *menu = new MenuPrincipal(0);
+    this->close();
+    menu->show();
+}
+
+void RegistrarseForm::on_pushButton_2_clicked()
+{
+    RedSocial *reds = new RedSocial(0);
+    this->close();
+    reds->show();
+}

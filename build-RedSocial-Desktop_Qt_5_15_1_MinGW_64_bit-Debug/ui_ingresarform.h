@@ -12,10 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -30,14 +30,15 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QLineEdit *lineEdit_2;
-    QDialogButtonBox *buttonBox;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
 
     void setupUi(QDialog *IngresarForm)
     {
         if (IngresarForm->objectName().isEmpty())
             IngresarForm->setObjectName(QString::fromUtf8("IngresarForm"));
         IngresarForm->setWindowModality(Qt::ApplicationModal);
-        IngresarForm->resize(394, 170);
+        IngresarForm->resize(509, 370);
         IngresarForm->setAutoFillBackground(false);
         IngresarForm->setStyleSheet(QString::fromUtf8("QDialog{\n"
 "background-color: black;\n"
@@ -94,17 +95,18 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
-        buttonBox = new QDialogButtonBox(IngresarForm);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        pushButton = new QPushButton(IngresarForm);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        verticalLayout->addWidget(buttonBox);
+        verticalLayout->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(IngresarForm);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        verticalLayout->addWidget(pushButton_2);
 
 
         retranslateUi(IngresarForm);
-        QObject::connect(buttonBox, SIGNAL(accepted()), IngresarForm, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), IngresarForm, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(IngresarForm);
     } // setupUi
@@ -114,6 +116,8 @@ public:
         IngresarForm->setWindowTitle(QCoreApplication::translate("IngresarForm", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("IngresarForm", "Usuario:", nullptr));
         label_2->setText(QCoreApplication::translate("IngresarForm", "Contrase\303\261a:", nullptr));
+        pushButton->setText(QCoreApplication::translate("IngresarForm", "Aceptar", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("IngresarForm", "Cancelar", nullptr));
     } // retranslateUi
 
 };

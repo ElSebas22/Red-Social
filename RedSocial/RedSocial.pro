@@ -11,16 +11,19 @@ CONFIG += c++11
 SOURCES += \
     ingresarform.cpp \
     main.cpp \
+    menuprincipal.cpp \
     redsocial.cpp \
     registrarseform.cpp
 
 HEADERS += \
     ingresarform.h \
+    menuprincipal.h \
     redsocial.h \
     registrarseform.h
 
 FORMS += \
     ingresarform.ui \
+    menuprincipal.ui \
     redsocial.ui \
     registrarseform.ui
 
@@ -28,3 +31,5 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES +=

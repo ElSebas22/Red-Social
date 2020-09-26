@@ -22,6 +22,8 @@ private slots:
 
     void on_Ingresar_clicked();
 
+    void on_Ingresar_released();
+
 private:
     Ui::RedSocial *ui;
 };
