@@ -10,14 +10,18 @@ CONFIG += c++11
 
 SOURCES += \
     ingresarform.cpp \
+    listacuentas.cpp \
     main.cpp \
     menuprincipal.cpp \
+    nodo.cpp \
     redsocial.cpp \
     registrarseform.cpp
 
 HEADERS += \
     ingresarform.h \
+    listacuentas.h \
     menuprincipal.h \
+    nodo.h \
     redsocial.h \
     registrarseform.h
 
