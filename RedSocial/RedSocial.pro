@@ -9,20 +9,25 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cuenta.cpp \
     ingresarform.cpp \
-    listacuentas.cpp \
+    listaenlazada.cpp \
     main.cpp \
     menuprincipal.cpp \
     nodo.cpp \
     redsocial.cpp \
+    redsocialdata.cpp \
     registrarseform.cpp
 
 HEADERS += \
+    VariablesGlobales.h \
+    cuenta.h \
     ingresarform.h \
-    listacuentas.h \
+    listaenlazada.h \
     menuprincipal.h \
     nodo.h \
     redsocial.h \
+    redsocialdata.h \
     registrarseform.h
 
 FORMS += \

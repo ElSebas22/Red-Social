@@ -1,6 +1,6 @@
 #include "redsocial.h"
 #include "ui_redsocial.h"
-#include "listacuentas.h"
+#include "listaenlazada.h"
 
 RedSocial::RedSocial(QWidget *parent)
     : QMainWindow(parent)

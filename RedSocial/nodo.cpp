@@ -1,6 +1,7 @@
 #include "nodo.h"
 
-Nodo::Nodo()
+template<typename N> Nodo<N>::Nodo(N valor)
 {
-
+    data = valor;
+    next = nullptr;
 }

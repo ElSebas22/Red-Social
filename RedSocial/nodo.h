@@ -1,19 +1,13 @@
 #ifndef NODO_H
 #define NODO_H
 
-#include <QString>
-
+template<typename N>
 class Nodo
 {
 public:
-    QString usuario;
-    QString contra;
-    QString correo;
+    N data;
     Nodo* next;
-    Nodo();
-    Nodo(QString usuario, QString contra, QString correo, Nodo* next):
-        usuario(usuario), contra(contra), correo(correo), next(next){}
-
+    Nodo(N valor);
 };
 
 #endif // NODO_H

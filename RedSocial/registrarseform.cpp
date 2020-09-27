@@ -1,18 +1,17 @@
 #include "registrarseform.h"
 #include "ui_registrarseform.h"
-#include "listacuentas.h"
+#include "listaenlazada.h"
 #include <iostream>
 #include <QString>
 #include "redsocial.h"
-
-ListaCuentas* LC;
+#include "VariablesGlobales.h"
+#include "cuenta.h"
 
 RegistrarseForm::RegistrarseForm(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::RegistrarseForm)
 {
     ui->setupUi(this);
-    LC = new ListaCuentas();
     //cARGAR LISTA
 }
 
@@ -26,13 +25,12 @@ void RegistrarseForm::on_pushButton_clicked()
     QString o1 = ui->lineEdit_3->text();
     QString o2 = ui->lineEdit->text();
     if(o1 == o2){
-        Nodo* n = new Nodo();
+        Cuenta* n = new Cuenta();
         n->usuario = ui->lineEdit_2->text();
         n->correo = ui->lineEdit_4->text();
         n->contra = ui->lineEdit_3->text();
 
-        LC->InsertarNodo(n);
-        LC->CargarNodos(n);
+        LC->InsertarCuenta(n);
 
         MenuPrincipal *menu = new MenuPrincipal(0);
         this->close();
